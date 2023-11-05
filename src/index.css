@@ -1,1 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 
+:root{
+	--clr1:#444444;
+	--clr2:#FFFF;
+	--clr3:#fac710;
+	--clr4:#414bb2;
+	--clr5:#efd780;
+	--fontAbril:'Abril Fatface', serif;
+	--fontPermanent:'Permanent Marker', cursive;
+}
+
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	position: relative;
+	background-color: var(--clr1);
+}
+
+.hidden{
+	gap:50px;
+	display: flex;
+    flex-direction: column;	
+
+}
+.normas{
+	display: none;
+	/*background-image: url(assets/rock-paper-scissors.png);*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: -80px;
+	width: 100vw;
+	height: 99vh;
+}
+.info{
+	position: relative;
+	background-color: #767676;
+	color: var(--clr2);
+	width: 8%;
+    font-size: 4rem;
+    transition: .5s
+}
+.info:hover{
+	transform: scale(1.1);
+	background-color: var(--clr5)
+}
+.datos {
+	display: flex;
+    gap: 3%;
+    align-items: center;
+}
+
+.titulo{
+	margin-top: -15px;
+	text-align: center;
+    font-size: 2.5rem;
+    font-family: var(--fontPermanent);
+    letter-spacing: 0.14em ;
+    color: var(--clr2);
+}
+.interfas{
+    align-self: center;
+    display: flex;
+    gap: 12rem;
+}
+.eleciones {
+    width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; 
+}
+.eleciones h2 {
+    display: flex;
+    gap: 10px;
+    color: var(--clr3);
+    font-size: 2.5rem;
+    font-family: var(--fontAbril);
+    letter-spacing: 0.1em ;
+    align-items: center;
+}
+.eleciones .gano {
+	color: #8fd14f;
+	font-size: 3rem;
+}
+.eleciones .perdio {
+	color:#f24726;
+	font-size: 3rem;
+}
+.eleciones .empate{
+	color:var(--clr4);
+	font-size: 3rem;
+}
+.eleciones .res {
+    margin-top: -70px;
+    font-size: 8rem;
+    color:#959595;
+}
+.eleccion{
+	border: solid 3px;
+    background-color: #e6e6e6;
+    padding: 12% 32%;
+    font-size: 7rem;
+}
+.vs {
+    display: flex;
+    align-self: center;
+    font-size: 5rem;
+    color: var(--clr3);
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--fontPermanent);
+}
+.vs button {
+	background-color: var(--clr4);
+    border: none;
+    border-radius: 100vmax;
+    padding: 10px 30px;
+    color: var(--clr2);
+    font-size: 1.7rem;
+    transition: .4s;
+}
+
+.vs button:hover{
+	transform: scale(1.1); 
+}
+.armas {
+    margin-top: 2.6%;
+    display: flex;
+    gap: 10.8%;
+    justify-content: center;
+}
+.armas button {
+	border:solid 3px; 
+	background-color: #959595;
+    
+    font-size: 4.5rem;
+    padding: 9px;
+    transition: .4s;
+}
+
+
+.armas button:focus,
+.armas button:hover{
+	background-color: var(--clr5);
+	transform: scale(1.1);
+}
+.rotate{
+	display: none;
+}
+
+@media screen and (max-width: 1150px){
+	.titulo{
+		letter-spacing: 0.1em;
+		font-size: 2.1rem;
+	}
+	.interfas{
+		gap:8rem; 
+	}
+	.eleciones h2 {
+		font-size: 2.2rem;
+		letter-spacing: 0;
+	}
+	.eleccion{
+		font-size: 5.5rem;
+		padding: 10% 28%;
+	}
+
+	.armas {
+		margin-top:0;
+		gap:10%; 
+	}
+	.armas button {
+		width:auto;
+		font-size: 4rem;
+
+	}
+}
+@media screen and (max-width: 960px){
+	.titulo{
+		font-size: 1.8rem;
+	    margin-top: -6%;
+	    margin-left: 10%;
+	}
+	.interfas{
+		gap: 0rem;
+	}
+	.info{
+		width: 4%;
+    	font-size: 2rem;
+	}
+	.titulo{
+		    font-size: 1.2rem;
+    margin-top: -5%;
+    margin-left: 6%;
+	}
+	.hidden{
+		gap: 5px;
+	}
+	.eleciones h2{
+		font-size: 1.4rem
+	}
+	.eleccion {
+    font-size: 2.5rem;
+    padding: 7%;
+	}
+	.vs {
+    display: flex;
+    font-size: 1.5rem;
+    color: var(--clr3);
+    flex-direction: column;
+    font-family: var(--fontPermanent);
+    align-items: center;
+}
+.armas {
+    margin-top: -94px;
+    gap: 6%;
+}
+.armas button {
+    width: auto;
+    font-size: 2rem;
+}
+}
+@media screen and (max-width: 600px){
+	.hidden{
+		filter: contrast(10%);
+	}
+	.conteiner-rotate{
+		padding:30vh 25vw;
+		position: absolute;
+		z-index: 1; 
+	}
+	.rotate{
+		display: flex;
+		padding: 0 14px;
+	    background-color: #ff00009e;
+	    flex-direction: column;
+	    justify-content: center;
+
+	}
+	.rotate h3 {
+		    font-size: 2.5rem;
+		    text-align: center;
+		    font-family: var(--fontPermanent);
+	}
+}
+@media screen and (max-width: 480px){
+	.normas img {
+		width: 175%;
+		height: 100%;
+		margin-top:3px;
+		margin-left: -281px; 
+	}	
+}
